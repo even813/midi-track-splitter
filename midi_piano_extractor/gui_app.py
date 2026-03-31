@@ -12,7 +12,6 @@ MIDI 钢琴分轨工具 - 精美 tkinter GUI
   · 输出路径自定义
   · 进度提示 + 状态栏
 
-作者：资深开发工程师 / 高质量代码示范
 """
 
 from __future__ import annotations
