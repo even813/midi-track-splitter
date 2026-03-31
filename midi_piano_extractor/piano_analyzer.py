@@ -10,7 +10,6 @@ MIDI 钢琴轨道智能识别引擎
   4. 复音密度与和弦特征
   5. 速度（velocity）分布特征
 
-作者：资深开发工程师 / 高质量代码示范
 """
 
 from __future__ import annotations
