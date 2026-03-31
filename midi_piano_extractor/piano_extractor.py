@@ -12,7 +12,6 @@ MIDI 钢琴分轨提取器
   - 钢琴 + 全局 Meta 轨道（保留 BPM/时间签名等）
   - 原始文件去掉非钢琴轨道
 
-作者：资深开发工程师 / 高质量代码示范
 """
 
 from __future__ import annotations
