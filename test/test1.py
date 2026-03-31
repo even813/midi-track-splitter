@@ -2,12 +2,11 @@ import mido
 from mido import Message, MidiFile, MidiTrack, MetaMessage
 
 def create_test_midi():
-    print("正在為主人生成終極測試 MIDI 文件喵...")
-    # 創建一個多軌 MIDI 文件 (type=1 代表多軌道同步)
+    # 创建一個多轨 MIDI 文件 (type=1 代表多轨道同步)
     mid = MidiFile(type=1)
 
     # ==========================================
-    # 軌道 0：全局控制軌 (通常用來放速度、拍號等全局信息)
+    # 轨道 0：全局控制轨 (通常用来放速度、拍号等全局信息)
     # ==========================================
     track0 = MidiTrack()
     mid.tracks.append(track0)
@@ -15,7 +14,7 @@ def create_test_midi():
     track0.append(MetaMessage('set_tempo', tempo=mido.bpm2tempo(120), time=0))
 
     # ==========================================
-    # 軌道 1：主旋律 (鋼琴 - 通道 0)
+    # 轨道 1：主旋律 (钢琴 - 通道 0)
     # ==========================================
     track1 = MidiTrack()
     mid.tracks.append(track1)
@@ -27,7 +26,7 @@ def create_test_midi():
     track1.append(Message('note_on', note=64, velocity=80, channel=0, time=0))
     track1.append(Message('note_on', note=67, velocity=80, channel=0, time=0))
     
-    # 經過 480 個 ticks (通常是一拍) 後，同時鬆開
+    # 经过 480 个 ticks (通常是一拍) 侯，同时松开
     track1.append(Message('note_off', note=60, velocity=64, channel=0, time=480))
     track1.append(Message('note_off', note=64, velocity=64, channel=0, time=0))
     track1.append(Message('note_off', note=67, velocity=64, channel=0, time=0))
